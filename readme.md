@@ -46,3 +46,10 @@ This project is licensed under the MIT License. See the [LICENSE](./LICENSE) fil
 ## Acknowledgements
 
 - [Robotics Toolbox for Python](https://petercorke.com/toolboxes/robotics-toolbox/) by Peter Corke
+
+## Material
+
+- https://petercorke.com/download/31/python-tools/1349/python_toolbox_icra_2021.pdf
+- https://petercorke.com/
+- https://github.com/petercorke/robotics-toolbox-python/tree/master/roboticstoolbox/examples
+- https://github.com/petercorke/robotics-toolbox-python/tree/master/notebooks
