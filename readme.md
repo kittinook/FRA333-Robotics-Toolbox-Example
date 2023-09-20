@@ -4,12 +4,17 @@ This tutorial series introduces concepts in robotic kinematics using Jupyter not
 
 ## Table of Contents
 
-1. [Introduction to Robotic Kinematics](./intro_to_kinematics.ipynb)
-2. [Forward Kinematics for a 2R Manipulator](./forward_kinematics_2R.ipynb)
-3. [Forward Kinematics for a 3R Manipulator](./forward_kinematics_3R.ipynb)
-4. [Inverse Kinematics for a 3R Manipulator](./inverse_kinematics_3R.ipynb)
-5. [Robot Visualization and Animation](./robot_visualization.ipynb)
-6. [Advanced Topics in Robotic Kinematics](./advanced_kinematics.ipynb)
+1. [Detailed Exploration of Transformations in Robotics](./1_TF.ipynb)
+2. [Homogeneous Transformation](./2_TransformationMatrix.ipynb)
+3. [Drone Transformation Problem](./3_SimpleProblem1.ipynb)
+4. [Robotic Arm End-Effector Position Calculation](./4_SimpleProblem2.ipynb)
+5. [Forward Kinematics for a 3R Manipulator](./5_ForwardKinematics.ipynb)
+6. [Inverse Kinematics for a 3R Manipulator](./6_InverseKinematics.ipynb)
+7. [Robotics Toolbox Teach Mode](./7_animation.py)
+8. [Gimbal](./8_gimbal.py)
+9. [Panda Robot](./9_swift_panda.py)
+10. [Exercise](./10_example.py)
+
 
 ## Prerequisites
 
