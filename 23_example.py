@@ -52,7 +52,7 @@ dt = 0.05
 
 while True:
     # e = np.linalg.pinv(l_target.T) * r_target.T
-    print(e)
+    # print(e)
     env.step(dt)
 
 env.hold()
