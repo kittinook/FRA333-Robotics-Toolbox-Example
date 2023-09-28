@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 a1, a2 = 1.5, 1  # Link lengths
 
 # Joint configuration
-q = [np.pi/4, np.pi/3]
+q = [np.pi/4, 0]
 
 # Joint velocities
 q_dot = [0.0, 0.5]

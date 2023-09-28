@@ -35,9 +35,45 @@ y_g = 0.0
 k_p = 4
 
 fig, ax = plt.subplots()
+plt.grid(True)
+plt.title("2R Robot with End-effector Velocity")
+
 while True:
     if time.time() - t_1 > dt:
         t_1 = time.time()
-        plt.pause(0.1)
+        
+        # Compute end-effector position using forward kinematics
+        x = a1 * np.cos(q[0]) + a2 * np.cos(q[0] + q[1])
+        y = a1 * np.sin(q[0]) + a2 * np.sin(q[0] + q[1])
+
+        # Compute the Jacobian
+        J = np.array([
+            [-a1 * np.sin(q[0]) - a2 * np.sin(q[0] + q[1]), -a2 * np.sin(q[0] + q[1])],
+            [a1 * np.cos(q[0]) + a2 * np.cos(q[0] + q[1]), a2 * np.cos(q[0] + q[1])]
+        ])
+
+        J_1 = J[:, 0]
+        J_2 = J[:, 1]
+        
+        e_x = x_g - x
+        e_y = y_g - y
+        e = np.array( [ [e_x], [e_y] ] )
+        
+        V = e * k_p
+        q_d = np.linalg.inv( J ) @ V
+        print(q_d)
+        # Ve = K * e
+        # q_d = J-1 (Ve)
+        q[0] = q[0] + (q_d[0] * dt)
+        q[1] = q[1] + (q_d[1] * dt)
+        # Plot robot and velocities
+        ax.clear()
+        ax.plot([0, a1 * np.cos(q[0]), x], [0, a1 * np.sin(q[0]), y], 'o-')  # Plot robot
+        ax.quiver(x, y, J_1[0], J_1[1], color='r')  # Plot velocity vector
+        ax.quiver(x, y, J_2[0], J_2[1], color='b')  # Plot velocity vector
+        ax.set_xlim([-a1-a2, a1+a2])
+        ax.set_ylim([-a1-a2, a1+a2])
+
+        plt.pause(dt)
         # q[1] = q[1] + (q_dot*dt)
          

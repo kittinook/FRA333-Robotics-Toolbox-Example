@@ -30,7 +30,7 @@ J = np.array([
 v = J @ q_dot
 t_1 = time.time()
 dt = 0.01
-x_g = 0.5
+x_g = 2.5
 y_g = 0.0
 k_p = 4
 
