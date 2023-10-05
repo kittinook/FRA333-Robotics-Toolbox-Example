@@ -1,5 +1,4 @@
-# Homework Assignment 2: Differential Kinematics
-
+# Homework Assignment 4: Static Force
 ## Objective : 
 > &ensp;&ensp;&ensp;&ensp;&ensp;การบ้านนี้ถูกออกแบบึ้นมาเพื่อให้ผู้เรียนได้ประยุกต์ใช้องค์ความรู้การหาจลนศาสตร์เชิงอนุพันธ์ (Differential kinematics) ของหุ่นยนต์แขนกล 3 แกน (3-DOF Manipulator)
 
