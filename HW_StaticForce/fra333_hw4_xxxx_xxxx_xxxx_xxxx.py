@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import numpy as np
 import math
-from HW2_utils import FKHW3
+from HW_StaticForce.HW4_utils import FKHW3
 
 '''
     Name:   <NAME> <SURNAME> <ID>
