@@ -11,7 +11,7 @@ def compute_manipulability(J):
 a1, a2 = 1.5, 1  # Link lengths
 
 # Joint configuration
-q = np.array([np.pi/4, np.pi/3])
+q = np.array([np.pi/4, np.pi])
 
 # Joint velocities
 q_dot = [0.0, 0.0]
@@ -30,7 +30,7 @@ J = np.array([
 v = J @ q_dot
 t_1 = time.time()
 dt = 0.01
-x_g = 2.5
+x_g = 0.5
 y_g = 0.0
 k_p = 4
 
