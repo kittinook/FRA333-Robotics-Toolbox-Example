@@ -62,7 +62,7 @@ def update(frame):
     J = jacobian(theta1, theta2)
     velocity_ellipse = compute_ellipse(J @ J.T)
     force_ellipse = compute_ellipse(np.linalg.pinv(J).T @ np.linalg.pinv(J), scale=0.3)
-
+    
     lines['robot'].set_data([0, L1 * np.cos(theta1), x_end], [0, L1 * np.sin(theta1), y_end])
     lines['velocity_ellipse'].set_data(velocity_ellipse[0, :] + x_end, velocity_ellipse[1, :] + y_end)
     lines['force_ellipse'].set_data(force_ellipse[0, :] + x_end, force_ellipse[1, :] + y_end)
