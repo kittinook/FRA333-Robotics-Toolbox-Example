@@ -25,7 +25,7 @@ def forwardKinematics(q1, q2):
     y = a1 * np.sin(q1) + a2 * np.sin(q1 + q2)
     return [x, y]
     
-def checkObstacle(eff, q1, q2, center, radius):
+def checkObstacle(q1, q2, center, radius):
     pass
 
 class Node:
@@ -112,6 +112,14 @@ fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(8, 6))
 for q1 in range(resolution):
     for q2 in range(resolution):
         # Implement here
+        
+        result = checkObstacle(pose, q1_rad, q2_rad, center, radius)
+        if result == True:
+            ax2.scatter(q1 * scale, q2 * scale, color='red', marker='o')
+            grid[q1][q2].passable = False
+        else:
+            ax2.scatter(q1 * scale, q2 * scale, color='blue', marker='o')    
+            grid[q1][q2].passable = True
         pass
         
 
